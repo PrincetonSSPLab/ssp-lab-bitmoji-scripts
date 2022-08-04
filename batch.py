@@ -2,6 +2,24 @@
 
 """Command line tool that offers functionality to split of directories of
 flies into individual batches.
+
+This module contains the basic functionality for creating batches made for the
+Princeton SSP Lab bitmoji project. This command line tool requires the user
+to give an input directory where the files are contained, and offers the
+functionality for the user to:
+ - Randomly shuffle the input with a choice seed.
+ - Set the batch size.
+ - Chose output directory where the batches will be stored.
+
+Examples
+--------
+
+    $ python batch.py -d ./dir1/dir2 -o "C:\Users\usr\outputdir"
+    $ python batch.py -d ./dir1/dir2 -o "C:\Users\usr\outputdir" -s False
+    $ python batch.py -d ./dir1/dir2 -o "C:\Users\usr\outputdir" -b 50 -s False
+    $ python batch.py -d ./dir1/dir2 -o "C:\Users\usr\outputdir" -b 50 -s False -S 1
+    $ python batch.py -d ./dir1/dir2
+
 """
 
 import argparse
