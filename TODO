@@ -1,0 +1,10 @@
+# Add functionality to link batches to RA with external file
+# Link image to batches with external file
+# Combine all the individual json via-project files together into one master
+# file.
+
+# Each batch contains N images from the master set that contains M images
+# Total number of batches will be M/N
+
+# Split up into folders with jpgs (in a random order). Number the folders
+# sequentially
