@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Command line tool that offers functionality to split of directories of
+r"""Command line tool that offers functionality to split of directories of
 flies into individual batches.
 
 This module contains the basic functionality for creating batches made for the
