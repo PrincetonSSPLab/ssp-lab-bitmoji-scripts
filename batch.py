@@ -127,7 +127,7 @@ def create_all_batches(batches_dict, directory):
         Parent directory where all the batch folders will be made.
     """
     for batch_no, files in batches_dict.items():
-        folder_name = "Batch " + str(batch_no)
+        folder_name = "batch-" + str(batch_no)
         create_batch_folder(files, folder_name, directory)
 
 
@@ -167,7 +167,7 @@ def main():
     """Main function for the command line tool."""
     parser = initialize_parser()
     args = parser.parse_args()
-    
+
     input_directory = args.directory
 
     batch_size = args.batch_size
