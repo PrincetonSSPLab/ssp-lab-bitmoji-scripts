@@ -167,14 +167,23 @@ def main():
     """Main function for the command line tool."""
     parser = initialize_parser()
     args = parser.parse_args()
-    directory = args.directory
+    
+    input_directory = args.directory
+
     batch_size = args.batch_size
+    if batch_size is not None:
+        batch_size = int(batch_size)
+
     shuffle = args.shuffle
     output_directory = args.output_directory
 
-    all_image_paths = gather_filenames(directory)
+    seed = args.seed
+    if seed is not None:
+        seed = int(seed)
+
+    all_image_paths = gather_filenames(input_directory)
     batches_dict = split_filepaths_into_batches(all_image_paths, batch_size,
-                                                shuffle)
+                                                shuffle, seed)
     create_all_batches(batches_dict, output_directory)
 
 
